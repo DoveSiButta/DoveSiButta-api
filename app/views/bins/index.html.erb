@@ -1,0 +1,56 @@
+<%- model_class = Bin -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:description) %></th>
+      <th><%= model_class.human_attribute_name(:created_date) %></th>
+      <th><%= model_class.human_attribute_name(:created_by) %></th>
+      <th><%= model_class.human_attribute_name(:address) %></th>
+      <th><%= model_class.human_attribute_name(:city) %></th>
+      <th><%= model_class.human_attribute_name(:postcode) %></th>
+      <th><%= model_class.human_attribute_name(:region) %></th>
+      <th><%= model_class.human_attribute_name(:country) %></th>
+      <th><%= model_class.human_attribute_name(:latitude) %></th>
+      <th><%= model_class.human_attribute_name(:longitude) %></th>
+      <th><%= model_class.human_attribute_name(:published) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bins.each do |bin| %>
+      <tr>
+        <td><%= link_to bin.id, bin_path(bin) %></td>
+        <td><%= bin.description %></td>
+        <td><%= bin.created_date %></td>
+        <td><%= bin.created_by %></td>
+        <td><%= bin.address %></td>
+        <td><%= bin.city %></td>
+        <td><%= bin.postcode %></td>
+        <td><%= bin.region %></td>
+        <td><%= bin.country %></td>
+        <td><%= bin.latitude %></td>
+        <td><%= bin.longitude %></td>
+        <td><%= bin.published %></td>
+        <td><%=l bin.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_bin_path(bin), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      bin_path(bin),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_bin_path,
+            :class => 'btn btn-primary' %>

@@ -1,4 +1,7 @@
 Dovesibutta::Application.routes.draw do
+  resources :bins
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

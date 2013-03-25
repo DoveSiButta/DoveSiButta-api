@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  description: MyString
+  created_date: 2013-03-26 00:35:57
+  created_by: MyString
+  address: MyString
+  city: MyString
+  postcode: MyString
+  region: MyString
+  country: MyString
+  latitude: 1.5
+  longitude: 1.5
+  published: false
+
+two:
+  description: MyString
+  created_date: 2013-03-26 00:35:57
+  created_by: MyString
+  address: MyString
+  city: MyString
+  postcode: MyString
+  region: MyString
+  country: MyString
+  latitude: 1.5
+  longitude: 1.5
+  published: false
