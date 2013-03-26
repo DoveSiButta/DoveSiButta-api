@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130325233557) do
+ActiveRecord::Schema.define(:version => 20130326113127) do
 
   create_table "bins", :force => true do |t|
     t.string   "description"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(:version => 20130325233557) do
     t.boolean  "published"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "pictures", :force => true do |t|
+    t.string   "description"
+    t.integer  "picturable_id"
+    t.string   "picturable_type"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

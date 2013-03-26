@@ -1,4 +1,10 @@
 Dovesibutta::Application.routes.draw do
+  get "home/index"
+
+  get "home/about"
+
+  get "landing/index"
+
   resources :bins
 
 

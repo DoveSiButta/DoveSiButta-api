@@ -2,13 +2,64 @@
 <html>
 <head>
   <title>Dovesibutta</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/"><%= t('navbar.company_name') %></a>
+
+      <div class="container nav-collapse">
+        <ul class="nav">
+          <li><%= link_to "Bins", bins_path %></li>
+        </ul>
+        <!-- <ul class="nav pull-right">
+          <% if user_signed_in? %>
+            <li><span class="user-email"><%= t('navbar.logged_in_as') + " " + current_user.email %></span></li>
+
+            <li><%= link_to t('navbar.profile'), "/profile" %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+
+          <% else %>
+            <li><%= link_to "Log In", new_user_session_path %></li>
+            <li><%= link_to "Register", new_user_registration_path, :class => "last" %></li>
+          <% end %>
+        </ul> -->
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+      <a class="close" data-dismiss="alert">×</a>
+      <%= msg %>
+    </div>
+  <% end %>
+  <%= yield %>
+</div>
+<!-- /container -->
+
+<footer>
+  <div class="container">
+
+    <p>&copy; <%= Time.now.format_s("yyyy") %> DoveSiButta </p>
+  </div>
+</footer>
 
 </body>
 </html>
