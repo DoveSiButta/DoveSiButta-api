@@ -5,7 +5,9 @@ Dovesibutta::Application.routes.draw do
 
   get "landing/index"
 
-  resources :bins
+  resources :bins do
+    resource :picture
+  end
 
 
   # The priority is based upon order of creation:

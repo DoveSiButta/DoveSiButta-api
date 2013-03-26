@@ -14,6 +14,8 @@ class BinsController < ApplicationController
   # GET /bins/1.json
   def show
     @bin = Bin.find(params[:id])
+    #@picturable = @bin
+    #@picture = @picturable.picture
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +27,8 @@ class BinsController < ApplicationController
   # GET /bins/new.json
   def new
     @bin = Bin.new
+    #@picturable = @bin
+    #@note = Picture.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +45,7 @@ class BinsController < ApplicationController
   # POST /bins.json
   def create
     @bin = Bin.new(params[:bin])
+    #@picture = Picture.new(params[:picture]) #TODO: verificare che sia :picture
 
     respond_to do |format|
       if @bin.save

@@ -23,19 +23,7 @@
         <ul class="nav">
           <li><%= link_to "Bins", bins_path %></li>
         </ul>
-        <!-- <ul class="nav pull-right">
-          <% if user_signed_in? %>
-            <li><span class="user-email"><%= t('navbar.logged_in_as') + " " + current_user.email %></span></li>
-
-            <li><%= link_to t('navbar.profile'), "/profile" %></li>
-            <li class="divider"></li>
-            <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
-
-          <% else %>
-            <li><%= link_to "Log In", new_user_session_path %></li>
-            <li><%= link_to "Register", new_user_registration_path, :class => "last" %></li>
-          <% end %>
-        </ul> -->
+      <!-- User bar goes here -->
       </div>
       <!--/.nav-collapse -->
     </div>
@@ -54,10 +42,10 @@
 </div>
 <!-- /container -->
 
+
 <footer>
   <div class="container">
-
-    <p>&copy; <%= Time.now.format_s("yyyy") %> DoveSiButta </p>
+    <p>&copy; <%= Time.now.strftime("%Y") %> DoveSiButta </p>
   </div>
 </footer>
 
