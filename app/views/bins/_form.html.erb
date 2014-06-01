@@ -65,8 +65,12 @@
       <%= f.check_box :published, :class => 'check_box' %>
     </div>
   </div>
-
-<!-- TODO: manca picture upload -->
+  <div class="control-group">
+    <%= f.label :picture, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :picture %>
+    </div>
+  </div>
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>

@@ -1,9 +1,13 @@
 Dovesibutta::Application.routes.draw do
+  devise_for :users
+
   get "home/index"
 
   get "home/about"
 
   get "landing/index"
+
+  root to: "home#index"
 
   resources :bins do
     resource :picture
