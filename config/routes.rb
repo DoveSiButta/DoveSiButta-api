@@ -9,8 +9,18 @@ Dovesibutta::Application.routes.draw do
 
   root to: "home#index"
 
+  namespace :api, :defaults => {:format => :json}  do
+    namespace :v1 do
+      resources :bins do
+        collection do
+          post 'by_location'
+          post 'in_bounding_box'
+        end
+      end
+    end
+  end
+
   resources :bins do
-    resource :picture
   end
 
 
