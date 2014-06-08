@@ -45,7 +45,6 @@ class BinsController < ApplicationController
   # POST /bins.json
   def create
     @bin = Bin.new(params[:bin])
-    #@picture = Picture.new(params[:picture]) #TODO: verificare che sia :picture
 
     respond_to do |format|
       if @bin.save
