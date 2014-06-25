@@ -1,2 +1,119 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<!-- Leaflet -->
+<!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /> -->
+<!--<link rel="stylesheet" href="leaflet-0.7.3/leaflet.css"/>-->
+<!--<%= stylesheet_link_tag 'leaflet-0.7.3/leaflet.css' %>-->
+<!-- awesome markers for leaflet (requires FontAwesome) -->
+<!-- Load Awesome Markers BEFORE Locate plugin!! -->
+<!--<link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css"/>-->
+<!--<link rel="stylesheet" href="awesome-markers/leaflet.awesome-markers.css"/>-->
+<!--<%= stylesheet_link_tag 'font-awesome.min' %>-->
+<!-- Locate plugin -->
+<!--<link rel="stylesheet" href="leaflet-locatecontrol/src/L.Control.Locate.css"/>-->
+<!--<%= stylesheet_link_tag  %>-->
+<!-- my stylesheet -->
+<!--<link rel="stylesheet" href="map.css"/>-->
+<!--<%= stylesheet_link_tag 'map' %>-->
+
+<div class="container">
+  <div class="header">
+    <ul class="nav nav-pills pull-right">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <h3 class="text-muted">Project name</h3>
+  </div>
+
+  <div class="row marketing">
+    <div class="col-lg-6">
+      <!-- Types -->
+      <h3>Cosa butti?</h3>
+      <select class="form-control" name="bin-type-select" id="bin-type-select">
+        <option value="1">Plastica</option>
+        <option value="2">Vetro</option>
+        <option value="3">Alluminio</option>
+      </select>
+    </div>
+    <div class="col-lg-6 pull-right">
+      <h3>Dove?</h3>
+      <div class="input-group">
+        <input type="text" class="form-control" id="address">
+            <span class="input-group-btn">
+              <button class="btn btn-default" id="button-go" type="button">Go!</button>
+            </span>
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+  </div><!-- /.row -->
+
+  <div class="row marketing" id="results"></div>
+
+  <div class="row marketing">
+    <!-- Map Div -->
+    <div id="map"></div>
+  </div>
+
+  <div class="jumbotron">
+    <h1>Jumbotron heading</h1>
+    <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+  </div>
+
+  <div class="row marketing">
+    <div class="col-lg-6">
+      <h4>Subheading</h4>
+      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+      <h4>Subheading</h4>
+      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+      <h4>Subheading</h4>
+      <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    </div>
+
+    <div class="col-lg-6">
+      <h4>Subheading</h4>
+      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+      <h4>Subheading</h4>
+      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+      <h4>Subheading</h4>
+      <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; Company 2014</p>
+  </div>
+
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!--<script src="bootstrap/js/bootstrap.min.js"></script>-->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<!-- Leaflet -->
+<!-- <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>  -->
+<!--<script src="leaflet-0.7.3/leaflet.js"></script>-->
+<!--<%= javascript_include_tag 'leaflet/leaflet-0.7.3/leaflet.js' %>-->
+<!-- Awesome Markers for Leaflet -->
+<!-- Load Awesome Markers BEFORE Locate control!! -->
+<!--<script src="awesome-markers/leaflet.awesome-markers.min.js"></script>-->
+<!--<%= javascript_include_tag 'leaflet/awesome-markers/leaflet-omnivore.js'  %>-->
+<!-- Locate plugin -->
+<!--<script src="leaflet-locatecontrol/src/L.Control.Locate.js"></script>-->
+<!--<%= javascript_include_tag 'leaflet/leaflet-locatecontrol/src/L.Control.Locate.js'  %>-->
+<!-- Leaflet OSM plugin -->
+<!--<script src="leaflet-osm/leaflet-osm.js"></script>-->
+<!--<%= javascript_include_tag 'leaflet/leaflet-osm/leaflet-omnivore.js'  %>-->
+<!-- Leaflet Omnivore plugin for topojson files -->
+<!--<script src="leaflet/leaflet-omnivore/leaflet-omnivore.js"></script>-->
+<!--<%= javascript_include_tag 'leaflet/leaflet-omnivore/leaflet-omnivore.js'  %>-->
+<!-- my code -->
+<!--<script src="app.js"></script>-->
+<!--<%= javascript_include_tag 'app' %>-->

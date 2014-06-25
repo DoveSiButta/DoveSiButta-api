@@ -13,6 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require leaflet
+//= require leaflet.awesome-markers
+//= require leaflet-omnivore
+//= require leaflet-osm
+//= require L.Control.Locate
+//= require app
 //= require_tree .
 
 
