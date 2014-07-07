@@ -3,10 +3,9 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require bootstrap_and_overrides
- *= require map
  *= require jumbotron-narrow
+ *= require font-awesome
  *= require leaflet
- *= require font-awesome.min
  *= require leaflet.awesome-markers
  *= require L.Control.Locate
  *= require L.Control.Locate.ie

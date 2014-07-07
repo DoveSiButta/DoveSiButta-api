@@ -33,6 +33,7 @@ gem 'sass-rails', github: 'guilleiguaran/sass-rails', branch: 'backport'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'coffee-rails', '~> 3.2.1'
 gem 'jquery-rails'
+gem 'font-awesome-rails'
 
 
 # To use ActiveModel has_secure_password
